@@ -1,36 +1,38 @@
 // sections/AboutSection.tsx
 import React from "react";
-import { UserRound, MapPin } from "lucide-react";
+import { UserRound, MapPin, BookOpen, TrendingUp, Briefcase } from "lucide-react";
 
 export default function AboutSection() {
     return (
-        <section className="py-16 bg-orange-50">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-            <UserRound className="w-8 h-8 text-orange-600" />
-            <h2 className="text-3xl font-bold text-orange-700">Tentang Pengajar</h2>
+        <section className="py-16 bg-transparent backdrop-blur-[1px] relative overflow-hidden">
+            <div className="max-w-5xl mx-auto px-4 bg-white shadow-md rounded-lg p-8 text-gray-700">
+                <h2 className="text-3xl font-bold text-orange-700 mb-6 text-center">Tentang Saya</h2>
+                <ul className="space-y-4 max-w-xl mx-auto mb-6">
+                    <li className="flex items-center space-x-3">
+                        <UserRound className="w-6 h-6 text-orange-600" />
+                        <span>Nama: dony putra perkasa</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                        <MapPin className="w-6 h-6 text-orange-600" />
+                        <span>Tempat Tinggal: Kasihan, Bantul, Yogyakarta</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                        <BookOpen className="w-6 h-6 text-orange-600" />
+                        <span>Pendidikan: matematika and software engineering</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                        <TrendingUp className="w-6 h-6 text-orange-600" />
+                        <span>Minat: matematika, cryptocurrency, dan software engineering</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                        <Briefcase className="w-6 h-6 text-orange-600" />
+                        <span>Profesi: Staf Pendidikaan (BOPKRI) dan Software Engineering (REVOU)</span>
+                    </li>
+                </ul>
+                <p className="text-center max-w-3xl mx-auto text-lg">
+                    Saya bersemangat dalam menyalurkan ilmu matematika saya, dan hal ini konsisten saya lakukan sejak 2015 ketika saya mengawali karir saya sebagai guru private door to door, dan sekarang ingin mencoba merambah kedalam private online yang ingin menjangkau tempat yang jauh, sesuai dengan pendidikan yang menjangkau dimanapun. Selain itu saya juga sebagai seorang junior software engineering yang sedang merintis keahlian saya.
+                </p>
             </div>
-
-            <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto mb-4">
-            Halo! Saya <span className="font-semibold text-orange-700">Dony Putra Perkasa</span>,
-            seorang guru privat matematika berpengalaman sejak tahun 2015.
-            </p>
-
-            <div className="flex items-center justify-center gap-2 mb-4 text-gray-700">
-            <MapPin className="w-5 h-5 text-orange-600" />
-            <span className="font-medium">Kasihan, Bantul, Yogyakarta</span>
-            </div>
-
-            <p className="text-gray-700 max-w-2xl mx-auto mb-4">
-            Dengan pengalaman mengajar berbagai jenjang, saya percaya bahwa setiap siswa dapat
-            memahami matematika dengan cara yang menyenangkan dan mudah dipahami.
-            </p>
-
-            <p className="text-gray-700 max-w-2xl mx-auto">
-            Pendekatan saya berfokus pada logika, latihan bertahap, dan suasana belajar yang santai
-            agar siswa lebih percaya diri dan menikmati setiap proses belajar.
-            </p>
-        </div>
         </section>
     );
 }

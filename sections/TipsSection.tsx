@@ -22,7 +22,7 @@ const tips = [
 
 export default function TipsSection() {
     return (
-        <section className="py-20 bg-orange-50">
+        <section className="py-20 bg-transparent backdrop-blur-[1px] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-6">
             <Lightbulb className="w-8 h-8 text-orange-500" />

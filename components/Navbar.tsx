@@ -24,7 +24,7 @@ export default function Navbar() {
                 {/* Brand */}
                 <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-orange-700">
                     <Calculator className="w-6 h-6 text-orange-600" />
-                    matematika dari nol<span className="text-orange-500">.</span>
+                    belajar matematika
                 </Link>
 
                 {/* Menu (Desktop) */}

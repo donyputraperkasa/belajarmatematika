@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function CTASection() {
     return (
-        <section className="py-20 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white text-center relative overflow-hidden">
+        <section className="py-20 bg-transparent backdrop-blur-[1px] relative overflow-hidden text-white text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10 pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-4 relative z-10">

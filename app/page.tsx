@@ -9,22 +9,36 @@ import CTASection from "@/sections/CTASection";
 
 export default function HomePage() {
   return (
-    <main className="bg-gradient-to-b from-orange-50 via-white to-orange-50 transition-all duration-500">
-      <HeroSection />
-      <div className="border-t border-orange-100" />
-      <ScheduleSection />
-      <div className="border-t border-orange-100" />
-      <PromoSection />
-      <div className="border-t border-orange-100" />
-      <AboutSection />
-      <div className="border-t border-orange-100" />
-      <ProgramSection />
-      <div className="border-t border-orange-100" />
-      <ReviewSection />
-      <div className="border-t border-orange-100" />
-      <TipsSection />
-      <div className="border-t border-orange-100" />
-      <CTASection />
+      <main
+        className="relative bg-cover bg-center bg-fixed text-gray-800"
+        style={{
+          backgroundImage: "url('/dony1.png')",
+        }}
+      >
+      {/* Overlay transparan agar teks tetap terbaca */}
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]" />
+
+      {/* Efek gradient transparan di atas konten utama */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/20 to-white/40 pointer-events-none" />
+
+      {/* Konten utama */}
+      <div className="relative z-10 ">
+        <HeroSection />
+        <div className="" />
+        <ScheduleSection />
+        <div className="" />
+        <PromoSection />
+        <div className="" />
+        <AboutSection />
+        <div className="" />
+        <ProgramSection />
+        <div className="" />
+        <ReviewSection />
+        <div className="" />
+        <TipsSection />
+        <div className="" />
+        <CTASection />
+      </div>
     </main>
   );
 }
