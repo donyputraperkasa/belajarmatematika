@@ -6,6 +6,13 @@ export default function AboutSection() {
     return (
         <section className="py-16 bg-transparent backdrop-blur-[1px] relative overflow-hidden">
             <div className="max-w-5xl mx-auto px-4 bg-white shadow-md rounded-lg p-8 text-gray-700">
+                <div className="flex justify-center mb-6">
+                  <img
+                    src="/dony2.png"
+                    alt="Foto Dony Putra Perkasa"
+                    className="w-36 h-36 rounded-full border-4 border-orange-500 object-cover shadow-md"
+                  />
+                </div>
                 <h2 className="text-3xl font-bold text-orange-700 mb-6 text-center">Tentang Saya</h2>
                 <ul className="space-y-4 max-w-xl mx-auto mb-6">
                     <li className="flex items-center space-x-3">

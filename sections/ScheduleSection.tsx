@@ -29,7 +29,7 @@ const schedule: Schedule = {
         Kamis: "kerja",
         Jumat: "kerja",
         Sabtu: "✅",
-        Minggu: "✅",
+        Minggu: "booked",
     },
     "10.00 - 11.30": {
         Senin: "kerja",
@@ -65,7 +65,7 @@ const schedule: Schedule = {
         Kamis: "✅",
         Jumat: "✅",
         Sabtu: "✅",
-        Minggu: "✅",
+        Minggu: "booked",
     },
 };
 
@@ -86,80 +86,73 @@ export default function ScheduleSection() {
         <div className="max-w-6xl mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
                 <CalendarDays className="w-8 h-8 text-orange-600" />
-                <h2 className="text-3xl font-bold text-orange-700">
+                <h2 className="text-3xl font-bold text-gray-900 drop-shadow-sm">
                     Jadwal Les Privat Mingguan
                 </h2>
             </div>
-            <p className="text-gray-700 mb-8">
+            <p className="text-gray-900 drop-shadow-sm mb-8">
             Jadwal disesuaikan dengan waktu luang pengajar.
             </p>
 
             <div className="overflow-x-auto">
-                <table className="w-full border-collapse shadow-md bg-white rounded-xl overflow-hidden">
-                    <thead>
-                        <tr className="bg-orange-600 text-white text-sm md:text-base">
-                            <th className="py-3 px-4 text-left">Waktu</th>
-                            {days.map((day) => (
-                            <th key={day} className="py-3 px-4">
-                                {day}
-                            </th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {times.map((time) => (
-                        <tr
-                        key={time}
-                        className="border-t hover:bg-orange-50 transition-colors duration-150"
-                        >
-                        <td className="py-3 px-4 font-medium bg-orange-100 text-sm md:text-base">
-                            {time}
-                        </td>
-                        {days.map((day) => {
-                            const status = schedule[time][day];
-
-                            let badgeStyle = "";
-                            let badgeText = "";
-
-                            if (status === "✅") {
-                            badgeStyle =
-                                "bg-green-100 text-green-700 border-green-300";
-                            badgeText = "Tersedia";
-                            } else if (status === "kerja") {
-                            badgeStyle =
-                                "bg-gray-200 text-gray-600 border-gray-300 italic";
-                            badgeText = "Kerja";
-                            } else if (status.trim() !== "") {
-                            // Jika bukan kerja / ✅ dan ada nama
-                            badgeStyle =
-                                "bg-blue-100 text-blue-700 border-blue-300 font-semibold";
-                            badgeText = status; // tampilkan nama siswa
-                            } else {
-                            badgeStyle =
-                                "bg-gray-100 text-gray-400 border-gray-200";
-                            badgeText = "-";
-                            }
-
-                            return (
-                            <td
-                                key={day}
-                                className="py-3 px-4 text-center text-sm md:text-base"
-                            >
-                                <span
-                                className={`inline-block px-3 py-1 rounded-full border ${badgeStyle}`}
-                                >
-                                {badgeText}
-                                </span>
-                            </td>
-                            );
-                        })}
-                        </tr>
+              <table className="w-full border-separate border-spacing-0 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <thead>
+                  <tr className="bg-gradient-to-r from-orange-500 to-amber-400 text-white text-sm md:text-base">
+                    <th className="py-4 px-6 text-left rounded-tl-2xl">Waktu</th>
+                    {days.map((day) => (
+                      <th key={day} className="py-4 px-6 font-semibold">
+                        {day}
+                      </th>
                     ))}
-                    </tbody>
-                </table>
+                  </tr>
+                </thead>
+                <tbody>
+                  {times.map((time, index) => (
+                    <tr
+                      key={time}
+                      className={`transition duration-200 ${
+                        index % 2 === 0 ? "bg-amber-50" : "bg-white"
+                      } hover:bg-orange-100`}
+                    >
+                      <td className="py-3 px-4 font-semibold bg-amber-100 text-sm md:text-base text-amber-800">
+                        {time}
+                      </td>
+                      {days.map((day) => {
+                        const status = schedule[time][day];
+                        let badgeStyle = "";
+                        let badgeText = "";
+
+                        if (status === "✅") {
+                          badgeStyle = "bg-green-100 text-green-700 border-green-300";
+                          badgeText = "Tersedia";
+                        } else if (status === "kerja") {
+                          badgeStyle = "bg-gray-200 text-gray-600 border-gray-300 italic";
+                          badgeText = "Kerja";
+                        } else if (status.trim() !== "") {
+                          badgeStyle = "bg-blue-100 text-blue-700 border-blue-300 font-semibold";
+                          badgeText = status;
+                        } else {
+                          badgeStyle = "bg-gray-100 text-gray-400 border-gray-200";
+                          badgeText = "-";
+                        }
+
+                        return (
+                          <td key={day} className="py-3 px-4 text-center text-sm md:text-base">
+                            <span
+                              className={`inline-block px-3 py-1 rounded-full border ${badgeStyle} shadow-sm transition-transform transform hover:scale-105`}
+                            >
+                              {badgeText}
+                            </span>
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
 
-            <p className="text-gray-700 mt-6 text-sm md:text-base">
+            <p className="text-gray-900 mt-6 text-sm md:text-base drop-shadow-sm">
             🧑‍💻 Jadwal pagi & siang di hari kerja tidak tersedia karena jam kerja.
             Jadwal fleksibel untuk sore dan akhir pekan ✨
             </p>

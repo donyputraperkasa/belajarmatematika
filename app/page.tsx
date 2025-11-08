@@ -6,13 +6,14 @@ import ProgramSection from "@/sections/ProgramSection";
 import ReviewSection from "@/sections/ReviewSection";
 import TipsSection from "@/sections/TipsSection";
 import CTASection from "@/sections/CTASection";
+import MapSection from "@/sections/MapSection";
 
 export default function HomePage() {
   return (
       <main
         className="relative bg-cover bg-center bg-fixed text-gray-800"
         style={{
-          backgroundImage: "url('/dony1.png')",
+          backgroundImage: "url('/dony2.png')",
         }}
       >
       {/* Overlay transparan agar teks tetap terbaca */}
@@ -38,6 +39,8 @@ export default function HomePage() {
         <TipsSection />
         <div className="" />
         <CTASection />
+        <div className="" />
+        <MapSection />
       </div>
     </main>
   );
