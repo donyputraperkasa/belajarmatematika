@@ -1,6 +1,12 @@
-# 📘 Math Lesson — Website Pembelajaran Matematika
+# 📘 Belajar Matematika — Website Pembelajaran Matematika
 
-Proyek ini adalah website pembelajaran matematika berbasis **Next.js** yang dibuat untuk membantu siswa SMP dan SMA memahami konsep matematika secara interaktif. Website ini dirancang agar mudah digunakan baik oleh siswa maupun guru privat.
+Proyek ini adalah platform belajar matematika berbasis **Next.js** yang dirancang khusus untuk membantu siswa SMP dan SMA di Indonesia memahami konsep-konsep matematika dengan cara yang lebih menyenangkan dan interaktif. Website ini memudahkan siswa dan guru privat dalam proses belajar mengajar matematika secara efektif.
+
+---
+
+## 🎯 Tujuan Proyek
+
+Membantu siswa memahami konsep matematika secara menyenangkan dan interaktif melalui materi pembelajaran yang mudah dipahami, latihan soal otomatis, serta fitur booking kelas privat dengan guru berpengalaman.
 
 ---
 
@@ -29,8 +35,8 @@ Pastikan Node.js telah terpasang di komputer Anda.
 
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/math-lesson.git
-   cd math-lesson
+   git clone https://github.com/username/belajarmatematika.git
+   cd belajarmatematika
    ```
 
 2. Install dependencies:
@@ -53,7 +59,7 @@ Pastikan Node.js telah terpasang di komputer Anda.
 ## 🧠 Struktur Folder
 
 ```
-math-lesson/
+belajarmatematika/
 ├── app/
 │   ├── page.tsx          # Halaman utama
 │   ├── lessons/          # Modul pembelajaran matematika
@@ -82,6 +88,13 @@ Proyek ini dapat dengan mudah di-deploy di platform gratis seperti:
 Dibuat oleh **Dony Putra Perkasa**  
 📍 Kasihan, Bantul, Yogyakarta  
 🧑‍🏫 Berpengalaman sebagai guru privat matematika sejak 2015  
+
+---
+
+## 💬 Kontak
+
+Email: example@email.com  
+GitHub: [https://github.com/username](https://github.com/username)
 
 ---
 

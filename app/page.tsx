@@ -7,6 +7,7 @@ import ReviewSection from "@/sections/ReviewSection";
 import TipsSection from "@/sections/TipsSection";
 import CTASection from "@/sections/CTASection";
 import MapSection from "@/sections/MapSection";
+import Question from "@/components/Question";
 
 export default function HomePage() {
   return (
@@ -39,6 +40,8 @@ export default function HomePage() {
         <TipsSection />
         <div className="" />
         <CTASection />
+        <div className="" />
+        <Question />
         <div className="" />
         <MapSection />
       </div>

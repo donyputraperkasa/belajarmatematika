@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Calculator } from "lucide-react";
+import TeamPage from "@/app/team/page";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +13,8 @@ export default function Navbar() {
     const menuItems = [
         { name: "Beranda", href: "/" },
         { name: "Program", href: "/program" },
-        { name: "Tips", href: "/tips" },
-        { name: "Review", href: "/review" },
         { name: "Tentang", href: "/about" },
-        { name: "Kontak", href: "/contact" },
+        { name: "Team", href: "/team" },
     ];
 
     return (
@@ -47,12 +46,10 @@ export default function Navbar() {
                     })}
 
                     <a
-                        href="https://wa.me/6282236343404?text=Halo%20saya%20ingin%20booking%20les%20privat%20matematika"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/login"
                         className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg shadow transition-all"
                     >
-                        Booking
+                        Login
                     </a>
                 </div>
 
@@ -87,12 +84,10 @@ export default function Navbar() {
                     })}
 
                     <a
-                        href="https://wa.me/6282236343404?text=Halo%20saya%20ingin%20booking%20les%20privat%20matematika"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/login"
                         className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-center mt-2 transition-all"
                     >
-                        Booking via WhatsApp
+                        Login
                     </a>
                 </div>
             )}
