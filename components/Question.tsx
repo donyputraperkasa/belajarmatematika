@@ -14,9 +14,9 @@ const faqs = [
         "Anda dapat mendaftar melalui website kami dengan mengisi formulir pendaftaran yang tersedia.",
     },
     {
-        question: "Apakah les bisa di kantor Nusagama?",
+        question: "Apakah les bisa di kantor Belajar Matematika?",
         answer:
-        "Ya, kami menyediakan opsi les di kantor Nusagama sesuai dengan kebutuhan Anda.",
+        "Ya, kami menyediakan opsi les di kantor Belajar Matematika sesuai dengan kebutuhan Anda.",
     },
     {
         question: "Apakah saya bisa menentukan jadwal les?",

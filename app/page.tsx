@@ -4,7 +4,6 @@ import PromoSection from "@/sections/PromoSection";
 import AboutSection from "@/sections/AboutSection";
 import ProgramSection from "@/sections/ProgramSection";
 import ReviewSection from "@/sections/ReviewSection";
-import TipsSection from "@/sections/TipsSection";
 import CTASection from "@/sections/CTASection";
 import MapSection from "@/sections/MapSection";
 import Question from "@/components/Question";
@@ -14,7 +13,7 @@ export default function HomePage() {
       <main
         className="relative bg-cover bg-center bg-fixed text-gray-800"
         style={{
-          backgroundImage: "url('/dony2.png')",
+          backgroundImage: "url('/wallpaper1.png')",
         }}
       >
       {/* Overlay transparan agar teks tetap terbaca */}
@@ -36,8 +35,6 @@ export default function HomePage() {
         <ProgramSection />
         <div className="" />
         <ReviewSection />
-        <div className="" />
-        <TipsSection />
         <div className="" />
         <CTASection />
         <div className="" />
