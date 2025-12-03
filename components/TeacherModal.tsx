@@ -13,11 +13,11 @@ interface TeacherModalProps {
 export default function TeacherModal({ teacher, onClose }: TeacherModalProps) {
     return (
         <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50 overflow-y-auto p-4"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-start md:justify-center items-start md:items-center z-50 overflow-y-auto p-4"
             onClick={onClose}
         >
         <div
-            className="bg-white w-full max-w-lg rounded-2xl overflow-hidden shadow-xl animate-[fadeIn_0.3s_ease] mb-10 relative"
+            className="bg-white w-full max-w-lg rounded-2xl shadow-xl animate-[fadeIn_0.3s_ease] relative max-h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
         >
 
