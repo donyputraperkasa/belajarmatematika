@@ -1,26 +1,57 @@
-export default function PromoModal({ selectedPromo, onClose }: any) {
-    if (!selectedPromo) return null;
+import { Promo } from "@/types/Promo"
+import Invoice from "./Invoice"
+
+interface PromoModalProps {
+    selectedPromo: Promo | null
+    onClose: () => void
+}
+
+export default function PromoModal({
+    selectedPromo,
+    onClose,
+}: PromoModalProps) {
+    if (!selectedPromo) return null
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
-        <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl">
-            <h2 className="text-2xl font-bold text-blue-700 mb-4">
-            {selectedPromo.title}
-            </h2>
+        <div
+        className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50"
+        onClick={onClose}
+        >
+        <div
+            className="w-full max-w-lg px-4"
+            onClick={(e) => e.stopPropagation()}
+        >
+            {/* ✅ INVOICE DI LUAR MODAL VISUAL */}
+            <Invoice promo={selectedPromo} />
 
-            <p className="text-gray-600 mb-4">{selectedPromo.desc}</p>
-
-            <p className="text-3xl font-extrabold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent mb-4">
-            {selectedPromo.price}
-            </p>
+            {/* ✅ ACTION BUTTON */}
+            <div className="mt-6 bg-white/95 backdrop-blur rounded-2xl p-4 shadow-lg flex gap-3">
+            <a
+                href={`https://wa.me/6282236343404?text=Halo,%20saya%20ingin%20mendaftar%20${encodeURIComponent(
+                selectedPromo.title
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center px-5 py-3 rounded-xl font-semibold bg-green-500 hover:bg-green-600 text-white transition-all"
+            >
+                Lanjut ke WhatsApp
+            </a>
 
             <button
-            onClick={onClose}
-            className="w-full px-5 py-3 rounded-xl font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-all"
+            onClick={() => window.print()}
+            className="print-hidden flex-1 px-5 py-3 rounded-xl font-mono text-sm border border-dashed bg-red-300 text-white hover:bg-red-400"
             >
-            Tutup
+            Export PDF
             </button>
+
+            <button
+                onClick={onClose}
+                className="flex-1 px-5 py-3 rounded-xl font-semibold border border-gray-300 text-gray-700 hover:bg-gray-300 transition-all"
+            >
+                Tutup
+            </button>
+            </div>
         </div>
         </div>
-    );
+    )
 }

@@ -24,3 +24,43 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* =========================
+    PRINT INVOICE ONLY
+   ========================= */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  /* Sembunyikan semua secara visual, BUKAN display */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Tampilkan invoice & isinya */
+  #invoice-content,
+  #invoice-content * {
+    visibility: visible !important;
+  }
+
+  #invoice-content {
+    position: relative !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Tombol tidak ikut tercetak */
+  .print-hidden {
+    display: none !important;
+  }
+}

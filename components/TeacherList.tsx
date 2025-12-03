@@ -17,9 +17,9 @@ export default function TeacherList() {
         bgColor: "#95e1ffff",
         role: "Owner",
         social: {
-            instagram: "https://instagram.com/username",
-            tiktok: "https://tiktok.com/@username",
-            linkedin: "https://linkedin.com/in/username",
+            instagram: "https://instagram.com/donyputraperkasa/",
+            tiktok: "https://tiktok.com/@donyputraperkasa",
+            linkedin: "https://linkedin.com/in/dony-putra-perkasa-49ba87233/",
         },
         lastEducation: "Matematika + Software Engineering",
         certification: "Sertifikasi Guru Profesional",
@@ -33,8 +33,8 @@ export default function TeacherList() {
         image: "dhani-1.png",
         bgColor: "#FF8C00",
         social: {
-            instagram: "https://instagram.com/username",
-            tiktok: "https://tiktok.com/@username",
+            instagram: "https://instagram.com/dhanimeilindrass/",
+            tiktok: "https://tiktok.com/@bugurumeimath",
             linkedin: "https://linkedin.com/in/username",
         },
         lastEducation: "Pendidikan Matematika",
